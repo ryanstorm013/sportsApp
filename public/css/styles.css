@@ -47,7 +47,8 @@ header#sportsBanner {
   font-family: "Chakra Petch", sans-serif;
 }
 
-button {
+/* Styling for the BUTTONS */
+#searchTeamBtn {
   height: 60px;
   width: 90px;
   font-size: 15px !important;
@@ -55,6 +56,17 @@ button {
   border: none !important;
   font-family: "Chakra Petch", sans-serif;
 }
+
+#viewTeamsBtn {
+  height: 60px;
+  width: 140px;
+  font-size: 15px !important;
+  background-color: blue !important;
+  border: none !important;
+  font-family: "Chakra Petch", sans-serif;
+}
+/* END Styling for the BUTTONS */
+
 /* Styling for the footer */
 footer {
   margin-top: 0px !important;
