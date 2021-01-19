@@ -11,25 +11,28 @@ $(document).ready(function () {
     console.log("search button - clicked");
     const userTeamSearch = teamSearch.val().trim();
     console.log(userTeamSearch);
-
-    // function getTeams(userTeamSearch) {
-    //     $.post("/api/login", {
-    //       email: email,
-    //       password: password
-    //     })
-    //       .then(function() {
-    //         window.location.replace("/members");
-    //         // If there's an error, log the error
-    //       })
-    //       .catch(function(err) {
-    //         console.log(err);
-    //       });
-    //   }
   });
 
   viewAllTeams.on("click", function (event) {
     event.preventDefault();
-
     console.log("view all - clicked");
+    $(".hidden").removeClass("hidden");
+
+    // Function to grab teams from the database
+    const getTeams = () => {
+      fetch(`/api/teams`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success in getting teams:", data);
+        })
+        .catch((error) => console.error("Error:", error));
+    };
+
+    getTeams();
   });
 });
