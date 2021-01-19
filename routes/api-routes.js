@@ -1,7 +1,9 @@
+const db = require("../models");
+
 module.exports = function (app) {
   // code here
-  app.get("/", (req, res) => {
+  app.get("/teams", (req, res) => {
     console.log("testing");
-    db.Add.findAll({}).then((dbAdd) => res.json(dbAdd));
+    db.Team.findAll({}).then((dbTeam) => res.json(dbTeam));
   });
 };
