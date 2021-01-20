@@ -18,8 +18,6 @@ $(document).ready(function () {
   viewAllTeams.on("click", function (event) {
     event.preventDefault();
 
-    // dataDb = [];
-
     console.log("view all - clicked");
     $(".hidden").removeClass("hidden");
 
