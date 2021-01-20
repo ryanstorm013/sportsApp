@@ -31,7 +31,7 @@ header#sportsBanner {
   margin-bottom: 50px;
 }
 
-#sportsTitle {
+.sportsTitle {
   text-align: center;
   padding-top: 100px;
   font-size: 72px;
@@ -41,14 +41,24 @@ header#sportsBanner {
 .homepageContainer {
   text-align: center;
   font-family: "Chakra Petch", sans-serif;
-  height: 250px;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 form {
   margin-top: 100px;
 }
+
+.allTeamContainer {
+  margin-top: 300px;
+}
+
+#addteamForm {
+  margin: 0px 400px 100px 400px;
+}
+
 #returnTeamsDiv {
-  height: 200px;
+  /* height: 200px; */
   font-family: "Chakra Petch", sans-serif;
 }
 
@@ -60,6 +70,15 @@ form {
   background-color: red !important;
   border: none !important;
   font-family: "Chakra Petch", sans-serif;
+}
+
+#addTeambtn {
+  font-size: 15px !important;
+  background-color: red !important;
+  border: none !important;
+  font-family: "Chakra Petch", sans-serif;
+  width: 100px;
+  height: 50px;
 }
 
 #viewTeamsBtn {
