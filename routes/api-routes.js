@@ -2,8 +2,19 @@ const db = require("../models");
 
 module.exports = function (app) {
   // code here
-  // app.get("/all-teams", (req, res) => {
-  //   console.log("testing");
-  //   db.Team.findAll({}).then((dbTeam) => res.json(dbTeam));
-  // });
+  app.get("/teams", (req, res) => {
+    console.log("testing");
+    db.Team.findAll({}).then((dbTeam) => {
+      console.log(dbTeam);
+      res.json(dbTeam);
+    });
+  });
+
+  app.post("/teams", (req, res) => {
+    db.Team.create({ name: req.body.name, touchdowns: req.body.touchdowns })
+      .then((result) => {
+        res.send(result);
+      })
+      .catch((err) => res.json(err));
+  });
 };
