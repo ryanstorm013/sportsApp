@@ -17,14 +17,32 @@ $(document).ready(function () {
 
   viewAllTeams.on("click", function (event) {
     event.preventDefault();
+
+    // dataDb = [];
+
     console.log("view all - clicked");
     $(".hidden").removeClass("hidden");
 
-    //Thomas Try
     fetch("/teams")
       .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        console.log(data);
 
-    // something else to add to html div
+        for (let i = 0; i < data.length; i++) {
+          const dataDb = data[i];
+          console.log(dataDb);
+
+          // const strData = JSON.stringify(dataDb);
+
+          $("#displayAllteams").append(
+            `<ul>${
+              "TEAM NAME: " +
+              [dataDb.name] +
+              " || TOUCHDOWNS: " +
+              [dataDb.touchdowns]
+            } </ul>`
+          );
+        }
+      });
   });
 });
