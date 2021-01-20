@@ -1,0 +1,86 @@
+body {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+h1 {
+  color: whitesmoke;
+  font-family: "Chakra Petch", sans-serif;
+}
+nav {
+  background-color: rgb(77, 77, 77);
+  margin-bottom: -20px;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.navbar {
+  margin-bottom: -20px !important;
+}
+
+header#sportsBanner {
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/largegrocery.jpg"); */
+  background-color: black;
+
+  /* Set a specific height */
+  height: 250px;
+  opacity: 0.9;
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+#sportsTitle {
+  text-align: center;
+  padding-top: 100px;
+  font-size: 72px;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.homepageContainer {
+  text-align: center;
+  font-family: "Chakra Petch", sans-serif;
+  height: 250px;
+}
+
+form {
+  margin-top: 100px;
+}
+#returnTeamsDiv {
+  height: 200px;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+/* Styling for the BUTTONS */
+#searchTeamBtn {
+  height: 60px;
+  width: 90px;
+  font-size: 15px !important;
+  background-color: red !important;
+  border: none !important;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+#viewTeamsBtn {
+  height: 60px;
+  width: 140px;
+  font-size: 15px !important;
+  background-color: blue !important;
+  border: none !important;
+  font-family: "Chakra Petch", sans-serif;
+}
+/* END Styling for the BUTTONS */
+
+/* Styling for the footer */
+footer {
+  margin-top: 0px !important;
+  bottom: 0;
+  width: 100%;
+  color: whitesmoke;
+  height: 150px;
+  font-family: "Chakra Petch", sans-serif;
+}
+.page-footer {
+  background-color: rgb(77, 77, 77);
+}
