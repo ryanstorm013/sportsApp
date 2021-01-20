@@ -16,7 +16,7 @@ $(document).ready(function () {
   viewAllTeams.on("click", function (event) {
     event.preventDefault();
     console.log("view all - clicked");
-    $(".hidden").removeClass("hidden");
+    // $(".hidden").removeClass("hidden");
 
     // Function to grab teams from the database
     const getTeams = () => {
