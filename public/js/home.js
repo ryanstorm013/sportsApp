@@ -33,30 +33,14 @@ $(document).ready(function () {
           // const strData = JSON.stringify(dataDb);
 
           $("#displayAllteams").append(
-            `<ul>${
-              "TEAM NAME: " +
+            `<div id="styleDisplayAll">${
+              "TEAM: " +
               [dataDb.name] +
               " || TOUCHDOWNS: " +
               [dataDb.touchdowns]
-            } </ul>`
+            } <button id="deleteButton"></button><button id="updateButton"></button></div>`
           );
         }
       });
   });
-
-  // predictions API
-
-  // fetch("https://api-football-v1.p.rapidapi.com/v2/predictions/157462", {
-  //   method: "GET",
-  //   headers: {
-  //     "x-rapidapi-key": "364a164466msh24f0cfc3cb4a195p18731ajsn7513dd3705cb",
-  //     "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-  //   },
-  // })
-  //   .then((responseApi) => {
-  //     console.log(responseApi);
-  //   })
-  //   .catch((err) => {
-  //     console.error(err);
-  //   });
 });

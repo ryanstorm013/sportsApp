@@ -16,4 +16,10 @@ module.exports = function (app) {
       })
       .catch((err) => res.json(err));
   });
+
+  // RYAN DELETE route for deleting teams.
+
+  // JIVAKA PUT route for updating todos. The updated todo will be available in req.body
+
+  //
 };
