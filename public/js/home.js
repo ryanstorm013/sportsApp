@@ -1,3 +1,5 @@
+// const { response } = require("express");
+
 $(document).ready(function () {
   //   console.log("sanity check");
 
@@ -15,24 +17,30 @@ $(document).ready(function () {
 
   viewAllTeams.on("click", function (event) {
     event.preventDefault();
+
     console.log("view all - clicked");
-    // $(".hidden").removeClass("hidden");
+    $(".hidden").removeClass("hidden");
 
-    // Function to grab teams from the database
-    const getTeams = () => {
-      fetch(`/api/teams`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Success in getting teams:", data);
-        })
-        .catch((error) => console.error("Error:", error));
-    };
+    fetch("/teams")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
 
-    getTeams();
+        for (let i = 0; i < data.length; i++) {
+          const dataDb = data[i];
+          console.log(dataDb);
+
+          // const strData = JSON.stringify(dataDb);
+
+          $("#displayAllteams").append(
+            `<div id="styleDisplayAll">${
+              "TEAM: " +
+              [dataDb.name] +
+              " || TOUCHDOWNS: " +
+              [dataDb.touchdowns]
+            } <button id="deleteButton"></button><button id="updateButton"></button></div>`
+          );
+        }
+      });
   });
 });

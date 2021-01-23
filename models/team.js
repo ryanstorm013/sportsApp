@@ -4,12 +4,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    gameWins: {
-      type: DataTypes.TEXT,
+    touchdowns: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-      validate: {
-        len: [1],
-      },
     },
   });
   return Team;

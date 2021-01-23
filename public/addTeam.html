@@ -50,10 +50,35 @@
 
     <!-- Banner -->
     <header id="sportsBanner">
-      <h1 class="sportsTitle">ALL MY TEAMS.</h1>
+      <h1 class="sportsTitle">ADD A TEAM.</h1>
     </header>
 
-    <div class="allTeamContainer" id="returnTeamsDiv"></div>
+    <div class="addTeamContainer">
+      <form id="addteamForm">
+        <div class="form-group">
+          <label for="formGroupExampleInput">Team Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="teamNameInput"
+            placeholder="input team name here"
+          />
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2"># of Touchdowns</label>
+          <input
+            type="text"
+            class="form-control"
+            id="touchdownInput"
+            placeholder="input # of touchdowns made here"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary mb-2" id="addTeambtn">
+          ADD TEAM
+        </button>
+      </form>
+      <p class="hidden" id="newTeamAdded">YOUR TEAM WAS ADDED.</p>
+    </div>
 
     <!-- Footer Section  -->
     <footer class="page-footer">
@@ -91,7 +116,7 @@
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     ></script>
-    <script src="./js/allTeams.js"></script>
+    <script src="./js/addTeam.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>

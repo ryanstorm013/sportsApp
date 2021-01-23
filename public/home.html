@@ -39,19 +39,18 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#"
+          <a class="nav-item nav-link active" href="home.html"
             >Home <span class="sr-only">(current)</span></a
           >
-          <a class="nav-item nav-link" href="#">Features</a>
-          <a class="nav-item nav-link" href="#">Pricing</a>
-          <a class="nav-item nav-link disabled" href="#">Disabled</a>
+          <a class="nav-item nav-link" href="allTeams.html">All teams</a>
+          <a class="nav-item nav-link" href="addTeam.html">Add a team</a>
         </div>
       </div>
     </nav>
 
     <!-- Banner -->
     <header id="sportsBanner">
-      <h1 id="sportsTitle">SPORTS.</h1>
+      <h1 class="sportsTitle">SPORTS DASHBOARD.</h1>
     </header>
 
     <!-- Form -->
@@ -75,10 +74,10 @@
       </form>
     </div>
 
-    <!-- <div class="homepageContainer" id="returnTeamsDiv">
-      <h1 class="hidden">ALL TEAMS:</h1>
+    <div class="homepageContainer" id="returnTeamsDiv">
+      <h1 id="all-teams-header" class="hidden">YOUR TEAM STATS.</h1>
       <p id="displayAllteams"></p>
-    </div> -->
+    </div>
 
     <!-- Footer Section  -->
     <footer class="page-footer">
@@ -91,16 +90,21 @@
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">Links</h5>
             <ul>
-              <!-- <li>
-                <a class="grey-text text-lighten-3" href="favorite_recipes.html"
-                  >Recent Recipes</a
+              <li>
+                <a class="grey-text text-lighten-3" href="home.html"
+                  >home page</a
                 >
-              </li> -->
-              <!-- <li>
-                <a class="grey-text text-lighten-3" href="stores_near_you.html"
-                  >Stores Near You</a
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="allTeams.html"
+                  >view all teams</a
                 >
-              </li> -->
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="addTeam.html"
+                  >add a team</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -112,6 +116,7 @@
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     ></script>
     <script src="./js/home.js"></script>
+    <script src="./js/addTeam.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>

@@ -1,10 +1,15 @@
 body {
   font-family: "Chakra Petch", sans-serif;
+  background-color: WHITE !important;
 }
 
 h1 {
   color: whitesmoke;
   font-family: "Chakra Petch", sans-serif;
+}
+
+h1 #all-teams-header {
+  font-size: 80px !important;
 }
 nav {
   background-color: rgb(77, 77, 77);
@@ -31,7 +36,7 @@ header#sportsBanner {
   margin-bottom: 50px;
 }
 
-#sportsTitle {
+.sportsTitle {
   text-align: center;
   padding-top: 100px;
   font-size: 72px;
@@ -41,14 +46,52 @@ header#sportsBanner {
 .homepageContainer {
   text-align: center;
   font-family: "Chakra Petch", sans-serif;
-  height: 250px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+#displayAllteams {
+  font-size: 32px;
+}
+
+#deleteButton {
+  width: 50px;
+  height: 50px;
+  background-color: red !important;
+  float: right;
+  margin-right: 20px;
+  border-radius: 7px;
+}
+
+#updateButton {
+  width: 50px;
+  height: 50px;
+  background-color: green !important;
+  border-radius: 7px;
+  float: right;
+  margin-right: 20px;
+}
+#newTeamAdded {
+  color: red;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 form {
-  margin-top: 100px;
+  margin-top: 125px;
+  margin-bottom: 0px !important;
 }
+
+.allTeamContainer {
+  margin-top: 300px;
+}
+
+#addteamForm {
+  margin: 0px 400px 100px 400px;
+}
+
 #returnTeamsDiv {
-  height: 200px;
+  /* height: 200px; */
   font-family: "Chakra Petch", sans-serif;
 }
 
@@ -62,6 +105,15 @@ form {
   font-family: "Chakra Petch", sans-serif;
 }
 
+#addTeambtn {
+  font-size: 15px !important;
+  background-color: red !important;
+  border: none !important;
+  font-family: "Chakra Petch", sans-serif;
+  width: 100px;
+  height: 50px;
+}
+
 #viewTeamsBtn {
   height: 60px;
   width: 140px;
@@ -72,9 +124,21 @@ form {
 }
 /* END Styling for the BUTTONS */
 
+#styleDisplayAll {
+  color: white;
+  width: 900px;
+  height: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  background-color: rgb(77, 77, 77);
+  border-radius: 5px;
+  padding-top: 15px;
+}
+
 /* Styling for the footer */
 footer {
-  margin-top: 0px !important;
+  margin-top: 75px !important;
   bottom: 0;
   width: 100%;
   color: whitesmoke;
