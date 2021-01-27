@@ -30,17 +30,24 @@ $(document).ready(function () {
           const dataDb = data[i];
           console.log(dataDb);
 
-          // const strData = JSON.stringify(dataDb);
-
           $("#displayAllteams").append(
             `<div id="styleDisplayAll">${
               "TEAM: " +
               [dataDb.name] +
               " || TOUCHDOWNS: " +
               [dataDb.touchdowns]
-            } <button id="deleteButton"></button><button id="updateButton"></button></div>`
+            } <button data-id=${
+              dataDb.id
+            } id="deleteButton"></button><button id="updateButton"></button><button id="favoriteButton"></button></div>`
           );
         }
+
+        //when the delete button is clicked, send the data to the backend to delete the button
+        $("#deleteButton").on("click", function (event) {
+          event.preventDefault();
+
+          console.log("delete button - clicked");
+        });
       });
   });
 });
