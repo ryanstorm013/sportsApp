@@ -37,28 +37,29 @@ $(document).ready(function () {
           // inputField.attr("value", `${dataDb.touchdowns}`)
           var editBtn = $("<a>EDIT</a>");
           editBtn.attr("href", `/home/edit/?id=${dataDb.id}`);
-          updateBtn.on("click", function () {
-            console.log("update clicked");
-            fetch("/api/teams", {
-              method: "PUT",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(updateData),
-            })
-              .then((response) => console.log(response))
-              .then((response) => response.json())
-              .then((data) => {
-                console.log(data);
 
-                for (let i = 0; i < data.length; i++) {
-                  const updateDb = data[i];
-                  console.log(updateDb);
+          // updateBtn.on("click", function () {
+          //   console.log("update clicked");
+          //   fetch("/api/teams", {
+          //     method: "PUT",
+          //     headers: {
+          //       "Content-Type": "application/json",
+          //     },
+          //     body: JSON.stringify(updateData),
+          //   })
+          //     .then((response) => console.log(response))
+          //     .then((response) => response.json())
+          //     .then((data) => {
+          //       console.log(data);
 
-                  // const strData = JSON.stringify(dataDb);
-                }
-              });
-          });
+          //       for (let i = 0; i < data.length; i++) {
+          //         const updateDb = data[i];
+          //         console.log(updateDb);
+
+          //         // const strData = JSON.stringify(dataDb);
+          //       }
+          //     });
+          // });
 
           styleDisplayAllEl.text(divText);
           styleDisplayAllEl.append(editBtn);
