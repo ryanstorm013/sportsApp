@@ -38,7 +38,11 @@ $(document).ready(function () {
               [dataDb.name] +
               " || TOUCHDOWNS: " +
               [dataDb.touchdowns]
-            } <button id="deleteButton"></button><button id="updateButton"></button></div>`
+            }   
+                <button type="submit" data-id=${dataDb.id} class="deleteButton">Delete</button>
+                <button type="submit" class="updateButton">Update</button>
+              
+            </div>`
           );
         }
       });
