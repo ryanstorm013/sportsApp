@@ -44,3 +44,4 @@ addTeamForm.on("click", function (event) {
       }
     });
 });
+

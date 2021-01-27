@@ -54,8 +54,8 @@ header#sportsBanner {
   font-size: 32px;
 }
 
-#deleteButton {
-  width: 50px;
+.deleteButton {
+  width: auto;
   height: 50px;
   background-color: red !important;
   float: right;
@@ -63,8 +63,8 @@ header#sportsBanner {
   border-radius: 7px;
 }
 
-#updateButton {
-  width: 50px;
+.updateButton {
+  width: auto;
   height: 50px;
   background-color: green !important;
   border-radius: 7px;
