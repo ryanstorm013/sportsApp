@@ -32,10 +32,10 @@ $(document).ready(function () {
           console.log(dataDb);
           const styleDisplayAllEl = $("<div>");
           const divText = `TEAM: ${dataDb.name} || TOUCHDOWNS: ${dataDb.touchdowns}`;
-          const updateBtn = $("<button>");
-          updateBtn.text(`Update`);
+          // const updateBtn = $("<button>");
+          // updateBtn.text(`Update`);
           // inputField.attr("value", `${dataDb.touchdowns}`)
-          var editBtn = $("<a>EDIT</a>");
+          var editBtn = $("<a><button>EDIT</button></a>");
           editBtn.attr("href", `/home/edit/?id=${dataDb.id}`);
 
           // updateBtn.on("click", function () {
