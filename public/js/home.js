@@ -6,7 +6,6 @@ $(document).ready(function () {
   const teamSearch = $("#teamSearch");
   const formSubmit = $("#searchTeamBtn");
   const viewAllTeams = $("#viewTeamsBtn");
-  // const updateTeams = $(".updateButton");
 
   formSubmit.on("click", function (event) {
     event.preventDefault();
@@ -22,7 +21,7 @@ $(document).ready(function () {
     console.log("view all - clicked");
     $(".hidden").removeClass("hidden");
 
-    fetch("/api/teams")
+    fetch("/teams")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -30,61 +29,30 @@ $(document).ready(function () {
         for (let i = 0; i < data.length; i++) {
           const dataDb = data[i];
           console.log(dataDb);
-          const styleDisplayAllEl = $("<div>");
-          const divText = `TEAM: ${dataDb.name} || TOUCHDOWNS: ${dataDb.touchdowns}`;
-          // const updateBtn = $("<button>");
-          // updateBtn.text(`Update`);
-          // inputField.attr("value", `${dataDb.touchdowns}`)
-          var editBtn = $("<a><button>EDIT</button></a>");
+          // const styleDisplayAllEl = $("<div>");
+          // const divText = `TEAM: ${dataDb.name} || TOUCHDOWNS: ${dataDb.touchdowns}`;
+          var editBtn = $("<a>EDIT</a>");
           editBtn.attr("href", `/home/edit/?id=${dataDb.id}`);
+          // styleDisplayAllEl.text(divText);
+          // styleDisplayAllEl.append(editBtn);
+          // styleDisplayAllEl.append();
 
-          // updateBtn.on("click", function () {
-          //   console.log("update clicked");
-          //   fetch("/api/teams", {
-          //     method: "PUT",
-          //     headers: {
-          //       "Content-Type": "application/json",
-          //     },
-          //     body: JSON.stringify(updateData),
-          //   })
-          //     .then((response) => console.log(response))
-          //     .then((response) => response.json())
-          //     .then((data) => {
-          //       console.log(data);
+          $("#displayAllteams")
+            .append(editBtn)
+            .append(
+              `<div id="styleDisplayAll">${
+                "TEAM: " +
+                [dataDb.name] +
+                " || TOUCHDOWNS: " +
+                [dataDb.touchdowns]
+              }
+                <button type="submit" data-id=${
+                  dataDb.id
+                } class="deleteButton">Delete</button>
 
-          //       for (let i = 0; i < data.length; i++) {
-          //         const updateDb = data[i];
-          //         console.log(updateDb);
-
-          //         // const strData = JSON.stringify(dataDb);
-          //       }
-          //     });
-          // });
-
-          styleDisplayAllEl.text(divText);
-          styleDisplayAllEl.append(editBtn);
-          // styleDisplayAllEl.append(updateBtn);
-          $("#displayAllTeams").append(styleDisplayAllEl);
-
-          $("#displayAllteams").append(
-            `<div id="styleDisplayAll">${
-              "TEAM: " +
-              [dataDb.name] +
-              " || TOUCHDOWNS: " +
-              [dataDb.touchdowns]
-
-            }   
-                <button type="submit" data-id=${dataDb.id} class="deleteButton">Delete</button>
-                <button type="submit" class="updateButton">Update</button>
-              
-            </div>`
-
-            } <button data-id=${
-              dataDb.id
-            } id="deleteButton"></button><button id="updateButton"></button><button id="favoriteButton"></button></div>`
-
-          );
-
+            </div>`,
+              editBtn
+            );
         }
 
         //when the delete button is clicked, send the data to the backend to delete the button
@@ -95,23 +63,4 @@ $(document).ready(function () {
         });
       });
   });
-});
-
-$(".deleteButton").on("click", function () {
-  // event.preventDefault();
-
-  console.log("Update - Clicked");
-
-  // fetch("/api/teams")
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     console.log(data);
-
-  // for (let i = 0; i < data.length; i++) {
-  //   const updateDb = data[i];
-  //   console.log(updateDb);
-
-  //   // const strData = JSON.stringify(dataDb);
-  // }
-  // })
 });
