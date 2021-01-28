@@ -10,6 +10,9 @@
 <img src="homePAGE.png">
 <img src="addPAGE.png">
 
+<p>Link to the powerpoint presentation:</p>
+<p>https://docs.google.com/presentation/d/17V3PV3ZgT_olR16W7gHxA4slUKoIW8VtD9jzaKNBeV4/edit#slide=id.gb916137ca5_0_64</p>
+
 <h2>Questions</h2>
 <p>Github username: lhutchinson22</p>
 <p>For a look at my repositories click this link: https://github.com/lhutchinson22</p>
