@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "MyServer456%",
+    "password": "password",
     "database": "sportsDB",
     "host": "127.0.0.1",
     "dialect": "mysql"

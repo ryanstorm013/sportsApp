@@ -29,25 +29,30 @@ $(document).ready(function () {
         for (let i = 0; i < data.length; i++) {
           const dataDb = data[i];
           console.log(dataDb);
+          // const styleDisplayAllEl = $("<div>");
+          // const divText = `TEAM: ${dataDb.name} || TOUCHDOWNS: ${dataDb.touchdowns}`;
+          var editBtn = $("<a>EDIT</a>");
+          editBtn.attr("href", `/home/edit/?id=${dataDb.id}`);
+          // styleDisplayAllEl.text(divText);
+          // styleDisplayAllEl.append(editBtn);
+          // styleDisplayAllEl.append();
 
-          $("#displayAllteams").append(
-            `<div id="styleDisplayAll">${
-              "TEAM: " +
-              [dataDb.name] +
-              " || TOUCHDOWNS: " +
-              [dataDb.touchdowns]
-<<<<<<< HEAD
-            }   
-                <button type="submit" data-id=${dataDb.id} class="deleteButton">Delete</button>
-                <button type="submit" class="updateButton">Update</button>
-              
-            </div>`
-=======
-            } <button data-id=${
-              dataDb.id
-            } id="deleteButton"></button><button id="updateButton"></button><button id="favoriteButton"></button></div>`
->>>>>>> a61daf65b69eff420a8bd0c1e12c0f9c9feba1eb
-          );
+          $("#displayAllteams")
+            .append(editBtn)
+            .append(
+              `<div id="styleDisplayAll">${
+                "TEAM: " +
+                [dataDb.name] +
+                " || TOUCHDOWNS: " +
+                [dataDb.touchdowns]
+              }
+                <button type="submit" data-id=${
+                  dataDb.id
+                } class="deleteButton">Delete</button>
+
+            </div>`,
+              editBtn
+            );
         }
 
         //when the delete button is clicked, send the data to the backend to delete the button
