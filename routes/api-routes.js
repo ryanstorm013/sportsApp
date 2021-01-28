@@ -18,6 +18,16 @@ module.exports = function (app) {
   });
 
   // RYAN DELETE route for deleting teams.
+  app.delete("/teams/:id", function(req, res) {
+
+    console.log("ive been hit", req.params)
+    res.send("success")
+    db.Team.destroy({ where: {id: req.params.id} }).then((result) => {
+      //console.log(result)
+      res.send(result);
+    })
+    .catch((err) => res.json(err));
+  });
 
   // JIVAKA PUT route for updating todos. The updated todo will be available in req.body
   app.put("/api/teams", (req, res) => {

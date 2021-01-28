@@ -66,17 +66,33 @@ $(document).ready(function () {
           // styleDisplayAllEl.append(updateBtn);
           $("#displayAllTeams").append(styleDisplayAllEl);
 
-          // const strData = JSON.stringify(dataDb);
+          $("#displayAllteams").append(
+            `<div id="styleDisplayAll">${
+              "TEAM: " +
+              [dataDb.name] +
+              " || TOUCHDOWNS: " +
+              [dataDb.touchdowns]
 
-          // $("#displayAllTeams").append(
-          //   `<div class="styleDisplayAll">${
-          //     "TEAM: " +
-          //     [dataDb.name] +
-          //     " || TOUCHDOWNS: " +
-          //     [dataDb.touchdowns]
-          //   } <button class="updateButton"></button><button class="deleteButton"></button></div>`
-          // );
+            }   
+                <button type="submit" data-id=${dataDb.id} class="deleteButton">Delete</button>
+                <button type="submit" class="updateButton">Update</button>
+              
+            </div>`
+
+            } <button data-id=${
+              dataDb.id
+            } id="deleteButton"></button><button id="updateButton"></button><button id="favoriteButton"></button></div>`
+
+          );
+
         }
+
+        //when the delete button is clicked, send the data to the backend to delete the button
+        $("#deleteButton").on("click", function (event) {
+          event.preventDefault();
+
+          console.log("delete button - clicked");
+        });
       });
   });
 });
