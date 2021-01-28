@@ -1,13 +1,14 @@
 <h1> MySports Dashboard</h1>
 
 <h2>Project Details</h2>
-<p></p>
+<p>This application uses Express, MySQL, and the MVC design to build a full stack application to allow you to keep track of your favorite football team's touchdowns throughout the season. </p>
 
 <p>To start the server, simply open the terminal and run: "nodemon server.js" if you have nodemon installed. Otherwise, use "node server.js"</p>
 
 <h2>Images</h2>
 
-<img src="landing.png">
+<img src="homePAGE.png">
+<img src="addPAGE.png">
 
 <h2>Questions</h2>
 <p>Github username: lhutchinson22</p>
