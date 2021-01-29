@@ -1,7 +1,9 @@
 <h1> MySports Dashboard</h1>
 
 <h2>Project Details</h2>
-<p>This application uses Express, MySQL, and the MVC design to build a full stack application to allow you to keep track of your favorite football team's touchdowns throughout the season. </p>
+<p>This application uses Express, MySQL, and the MVC design to build a full stack web application that allows you to keep track of your favorite football team's touchdowns throughout the season. The home page uses FETCH requests to display all the teams in the database and the stats associcated with the team. Once the teams are displayed, the user has an option to delete a team from the database or edit the number of touchdowns made. Each of these functions uses API FETCH requests to update the desired action within the databse and display the current information on the HTML. There is an option to add teams to the databse/HTML that dont currently appear on the "add a team" page. Once this team is added, their stats will be shown on the home page</p>
+
+<p>Future opportunities for development include a favorites button to add specific teams to another HTML page and to embed another API to pull in different real-time stats, game, or videos of a specified team. <p>
 
 <p>To start the server, simply open the terminal and run: "nodemon server.js" if you have nodemon installed. Otherwise, use "node server.js"</p>
 
