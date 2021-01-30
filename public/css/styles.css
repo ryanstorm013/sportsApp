@@ -67,9 +67,8 @@ header#sportsBanner {
   width: auto;
   height: 50px;
   background-color: green !important;
-  border-radius: 7px;
-  float: right;
-  margin-right: 20px;
+  border: none !important;
+  font-family: "Chakra Petch", sans-serif;
 }
 
 #favoriteButton {
@@ -144,6 +143,7 @@ form {
   border-radius: 5px;
   padding-top: 15px;
 }
+
 
 /* Styling for the footer */
 footer {

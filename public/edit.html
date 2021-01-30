@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <form id="editForm">
+        <label for="">Touchdowns</label>
+        <input type="text" id="tdInput" name="`${dataDb.touchdowns}`" />
+        <input type="submit" value="update" />
+      </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $("#editForm").on("submit", function (e) {
+        e.preventDefault();
+
+        const newvalues = $("#tdInput").val();
+        const id = window.location.href.split("=")[1];
+
+        $.ajax({
+          url: "/api/teams",
+          method: "PUT",
+          data: {
+            touchdowns: newvalues,
+            id: id,
+          },
+        }).then((response) => console.log(response));
+      });
+    </script>
+  </body>
+</html>

@@ -10,4 +10,14 @@ module.exports = (app) => {
   app.get("/all-teams", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/allTeams.html"));
   });
+
+  app.get("/home/edit", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/edit.html"));
+  });
+
+  app.post("/home/:id", (req, res) => {
+    console.log(req.params.id);
+    console.log(req.body);
+    res.redirect("/home.html")
+  })
 };
